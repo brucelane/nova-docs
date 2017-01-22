@@ -276,7 +276,7 @@
       <p>Out of the box, Nova comes with many features such as handling posts and comments, generating a newsletter, and much more. </p>
 <p>But it’s important to understand that you can also use the underlying framework powering these features directly and build a completely different type of app. </p>
 <p>So in this tutorial, we’ll focus on understanding this framework and seeing how to build a simple paginated list of movies. </p>
-<p>The completed code for this tutorial can be found in the <a href="https://github.com/TelescopeJS/Telescope/tree/nova-framework-tutorial/packages/my-package" target="_blank" rel="external">nova-framework-tutorial branch</a>, and you can also check out the <code>nova:movies-demo</code> package in the regular branch for a more full-featured version of the same example. </p>
+<p>The completed code for this tutorial can be found in the <a href="https://github.com/TelescopeJS/Telescope/tree/nova-framework-tutorial/packages/my-package" target="_blank" rel="external">nova-framework-tutorial branch</a>, and you can also check out the <code>framework-demo</code> package in the regular branch for a more full-featured version of the same example. </p>
 <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/RzoYVqsD9WI" frameborder="0" allowfullscreen></iframe>
 
 <h2 id="Set-Up"><a href="#Set-Up" class="headerlink" title="Set Up"></a>Set Up</h2><p>First, we’ll make sure we’re only including the Nova features we actually need. We can do that by removing any non-core packages in the <code>.meteor/packages</code> file (don’t worry, this will only make sure these packages are not loaded, and won’t actually remove them from your codebase). </p>
@@ -359,7 +359,7 @@
 <p>We only want to show the “New Movie” form when a user actually <em>can</em> submit a new movie, so we’ll make use of the mutation’s <code>check</code> function to figure this out.</p>
 <p>We need to access the current user to perform this check, so we’ll use the <code>withCurrentUser</code> higher-order component and use the <code>compose</code> utility to keep the syntax clean. </p>
 <p>Now fill out the form and submit it. The query will be updated and the new movie will appear right there in our list! </p>
-<h2 id="Going-Further"><a href="#Going-Further" class="headerlink" title="Going Further"></a>Going Further</h2><p>This is probably a good place to stop, but you can go further simply by going through the code of the <code>nova:movies-demo</code> package. In it, you’ll see how to:</p>
+<h2 id="Going-Further"><a href="#Going-Further" class="headerlink" title="Going Further"></a>Going Further</h2><p>This is probably a good place to stop, but you can go further simply by going through the code of the <code>framework-demo</code> package. In it, you’ll see how to:</p>
 <ul>
 <li>Create a resolver for single documents so you can load more data for a specific movie.</li>
 <li>Add edit and remove mutations and forms so you can manage your list.</li>
